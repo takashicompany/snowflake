@@ -71,10 +71,10 @@
 
 ダイオードは基板裏面のキースイッチ取付箇所の近くです。  
 基板に描かれている`▷|`マークの縦線マークとダイオードに描かれている縦線が同じ方向になるように配置します。  
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7721.jpg?raw=true" width = "600px" />
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7221.jpg?raw=true" width = "600px" />
 
 予備ハンダをしてダイオードの片側と基板をハンダ付けします。  
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7772.jpg?raw=true" width = "600px" />
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7222.jpg?raw=true" width = "600px" />
 
 もう片方のダイオードも基板とハンダ付けします。  
 <img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7223.jpg?raw=true" width = "600px" />
