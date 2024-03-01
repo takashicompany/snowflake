@@ -169,7 +169,7 @@ Snowflake基板はニッパーで加工することでスイッチプレート�
 <img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7238.jpg?raw=true" width = "600px" />
 
 **スイッチプレートを取り付けていない場合**  
-キースイッチを基板の表面に載せます。
+キースイッチを基板の表面に載せます。  
 <img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7238.jpg?raw=true" width = "600px" />
 
 ハンダ付けは裏返して行うので、マスキングテープなどで固定すると楽に作業が進められます。  
