@@ -67,7 +67,7 @@
 ### 2. ダイオードの取り付け
 
 ダイオードを基板に取り付けます。  
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7720.jpg?raw=true" width = "600px" />
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7220.jpg?raw=true" width = "600px" />
 
 ダイオードは基板裏面のキースイッチ取付箇所の近くです。  
 基板に描かれている`▷|`マークの縦線マークとダイオードに描かれている縦線が同じ方向になるように配置します。  
