@@ -82,7 +82,7 @@
 全部で13箇所にダイオードをハンダ付けします。  
 <img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7224.jpg?raw=true" width = "600px" />
 
-### XIAO RP2040の取り付け
+### 3. XIAO RP2040の取り付け
 
 キーボードの頭脳部分(MCU)としてXIAO RP2040を取り付けます。　　
 取付箇所は表面奥側です。  
@@ -92,63 +92,125 @@
 <img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7229.jpg?raw=true" width = "600px" />
 
 1箇所ずつハンダ付けをしていきます。  
+ズレないように注意しながら進めると手戻りやミスが少なくなります。
 <img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7230.jpg?raw=true" width = "600px" />
 
+全部で14箇所をハンダ付けします。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7232.jpg?raw=true" width = "600px" />
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+### 4. ファームウェアの書き込み
 
+[KMK Firmware](https://github.com/KMKfw/kmk_firmware)を用いる場合です。  
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+[こちら](http://kmkfw.io/docs/Getting_Started/)のKMK Firmwareの導入手順も併せて読むと理解が深まると思います。
 
+[こちら](https://circuitpython.org/board/seeeduino_xiao_rp2040/)から.uf2ファイルをダウンロードします。  
+<img src = "https://github.com/takashicompany/monokey/assets/4215759/47f0223c-b40d-4b95-8516-b403834db523" width = "600px" />
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+XIAO RP2040のUSB口とは反対側にある「B」と書かれたスイッチを押しながらUSBケーブルを差します。  
+「RPI-RP2」という名前の外部デバイスが表示されれば成功です。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7233.jpg?raw=true" width = "600px" />
 
+ダウンロードした.uf2を「RPI-RP2」に書き込みます。ドラッグアンドドロップかコピーペーストで書き込めます。  
+書き込み完了後、「CIRCUITPY」という名前の外部デバイスが表示されれば成功です。  
+<img src = "https://github.com/takashicompany/monokey/assets/4215759/1edcd0e8-89cb-49ea-af4f-ae5e574fdd37" width = "600px" />
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+[KMK Firmwareのソースコードのzip](https://github.com/KMKfw/kmk_firmware/archive/refs/heads/master.zip)をダウンロードします。  
+解凍後、フォルダ内の`boot.py`と`kmkフォルダ`をCIRCUITPYにドラッグアンドドロップ or コピーペーストします。  
+<img src = "https://github.com/takashicompany/monokey/assets/4215759/7f36a17a-5073-4edc-b0dd-3008e8e5ef75" width = "600px" />
 
+[code.py](https://github.com/takashicompany/snowflake/blob/master/firmware/kmk/code.py)をダウンロード、またはコピーしてCIRCUITPYにドラッグアンドドロップ　or ペーストをします。  
+<img src = "https://github.com/takashicompany/monokey/assets/4215759/0bfe6c1c-1bc5-4667-b853-cea94f43abf7" width = "600px" />
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+ピンセットなどでキースイッチ穴を通電させてキーが入力されるかを確認します。  
+正しく入力されていない場合、XIAO RP2040と基板のハンダ付けか、ダイオードのハンダ付けに問題がある可能性が高いです。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7234.jpg?raw=true" width = "600px" />
 
+### 5. スイッチプレートの加工と取り付け
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+Snowflake基板はニッパーで加工することでスイッチプレートとして利用することが可能です。  
+キースイッチがより強固に固定される利点や厚みのあるデザインといった変化があります。  
+動作に必須な項目ではありませんので、スキップしていただいても構いません。
+（尚、後でスイッチプレートを取り付けたい…となるとハンダ付けを吸い取るといった作業が必要になります）
 
+**ダイオード等を取り付けた基板では"ない"ものを使ってください！**  
+つまり、無加工の基板を使います。
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+ニッパーでキースイッチ取付部部にある点線を切り取ります。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7242.jpg?raw=true" width = "600px" />
 
+点線の2箇所をニッパーで切るとキースイッチ取付部分を切り離すことができます。  
+もし、切り離せない場合は裏面からもニッパーで切ると切り離しやすくなります。  
+切り離した際にキースイッチ取り付け部分が勢いよく飛ぶことがありますので、ご注意ください。
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7244.jpg?raw=true" width = "600px" />
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+キースイッチが挿せるかを確認します。  
+キースイッチは基板の表側から挿します。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7245.jpg?raw=true" width = "600px" />
 
+全ての穴にキースイッチが挿せることを確認します。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7246.jpg?raw=true" width = "600px" />
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+スイッチプレートと回路プレート(ダイオードの取り付けをしたプレート)の取り付けにはM2ネジとM2スペーサーを用います。
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7247.jpg?raw=true" width = "600px" />
 
+回路プレートの表側にあるネジ穴の上にスペーサーを置いて、裏側からネジでスペーサーを固定してください。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7248.jpg?raw=true" width = "600px" />
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+全部で5箇所にスペーサーを取り付けます。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7250.jpg?raw=true" width = "600px" />
 
+スイッチプレートのネジ穴と回路プレートのスペーサーのネジ穴の位置が合うように重ねてネジで固定します。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7252.jpg?raw=true" width = "600px" />
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+### 6. キースイッチのハンダ付け
 
+キースイッチを取り付けます。キースイッチは基板の表側に載せます。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7238.jpg?raw=true" width = "600px" />
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+**スイッチプレートを取り付けていない場合**  
+キースイッチを基板の表面に載せます。
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7238.jpg?raw=true" width = "600px" />
 
+ハンダ付けは裏返して行うので、マスキングテープなどで固定すると楽に作業が進められます。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7239.jpg?raw=true" width = "600px" />
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+---
 
+回路プレートの裏側からキースイッチの足が2本出ていることを確認します。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7254.jpg?raw=true" width = "600px" />
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+回路プレートとキースイッチの足をハンダ付けします。全部で13箇所です。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7255.jpg?raw=true" width = "600px" />
 
+### 6. 滑り止めシールの貼り付け
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+底面に滑り止めとしてゴム足シールを貼ります。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7256.jpg?raw=true" width = "600px" />
 
+取付箇所が狭い場合はゴム足シールを半分に切るなどしてください。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7257.jpg?raw=true" width = "600px" />
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+取付箇所の例は以下になります。  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7258.jpg?raw=true" width = "600px" />
 
+### 7. キーキャップを取り付ける
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+キースイッチにキーキャップを取り付けて完成です！  
+<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7263.jpg?raw=true" width = "600px" />
 
+### 8. 完成した後の楽しみ方
 
-<img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
+完成しましたら、ぜひSNSなどに写真を投稿頂ければと思います。
+Twitterのハッシュタグは [`#SnowflakeMacroPad #自作キーボード`](https://twitter.com/search?q=%23%E8%87%AA%E4%BD%9C%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%20%23SnowflakeMacroPad&src=typed_query) を付けていただけると幸いです。
+キットを組み立てた感想や、キーボードを使った所感などをお待ちしております！
+
+また、毎週日曜日の１9時より実施されている[#KEEP_PD](https://twitter.com/hashtag/KEEB_PD?f=live)に投稿頂くこともオススメです。  
+開催の告知は[@KEEB_PD](https://twitter.com/KEEB_PD)にて行われております。
 
+ご不明な点などございましたら、[@takashicompany](https://twitter.com/takashicompany)にメンションやDM頂ければ回答できるかと思います。
 
+<!--
 <img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
 
 
@@ -877,3 +939,4 @@
 
 <img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_ .jpg?raw=true" width = "600px" />
 
+-->
