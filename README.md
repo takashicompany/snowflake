@@ -58,10 +58,10 @@
 
 ❅のマークが描かれている方が表です。
 
-**表**
+**表**  
 <img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7218.jpg?raw=true" width = "600px" />
 
-**裏**
+**裏**  
 <img src = "https://github.com/takashicompany/snowflake/blob/master/images/build/IMG_7219.jpg?raw=true" width = "600px" />
 
 ### 2. ダイオードの取り付け
