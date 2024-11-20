@@ -5,10 +5,10 @@
 <img src = "https://github.com/takashicompany/snowflake/assets/4215759/fc2945a7-06c2-4ed5-b09b-674e3a9eda9f" width = "400px" />
 
 
+## キャンペーン
 
-組み立て手順は[Arrows Plus](https://github.com/takashicompany/arrows_plus/) と同様です。  
-キースイッチとキーキャップを13個ご用意ください。  
-ファームウェアのソースコードは[こちら](https://github.com/takashicompany/snowflake/blob/master/firmware/kmk/code.py)にございます。  
+[クリスマス期間中にElecrowでこの基板を無料で製造](https://www.elecrow.com/opensource.html)できます。  
+発注は[こちら](https://www.elecrow.com/10pcs-2-layer-pcb-2285.html)からガーバーデータをアップロードしてください。
 
 
 ## 組み立てに必要な部品
