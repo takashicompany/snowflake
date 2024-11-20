@@ -8,7 +8,7 @@
 ## キャンペーン
 
 [クリスマス期間中にElecrowでこの基板を無料で製造](https://www.elecrow.com/opensource.html)できます。  
-発注は[こちら](https://www.elecrow.com/10pcs-2-layer-pcb-2285.html)からガーバーデータをアップロードしてください。
+発注は[こちら](https://www.elecrow.com/10pcs-2-layer-pcb-2285.html)から[ガーバーデータ](https://github.com/takashicompany/snowflake/blob/master/gerber/showflake_rev1.zip)をアップロードしてください。
 
 
 ## 組み立てに必要な部品
